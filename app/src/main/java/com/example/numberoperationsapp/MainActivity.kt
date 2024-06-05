@@ -9,16 +9,17 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var editText1: EditText
+    private lateinit var editText2: EditText
+    private lateinit var editText3: EditText
+    private lateinit var buttonCalculate: Button
+    private lateinit var buttonClear: Button
+    private lateinit var textViewResult: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val editText1 = findViewById<EditText>(R.id.editText1)
-        val editText2 = findViewById<EditText>(R.id.editText2)
-        val editText3 = findViewById<EditText>(R.id.editText3)
-        val buttonCalculate = findViewById<Button>(R.id.buttonCalculate)
-        val buttonClear = findViewById<TextView>(R.id.buttonClear)
-        val textViewResult = findViewById<TextView>(R.id.textViewResult)
+        initView()
 
         val numberCommaFilter = InputFilter { source, _, _, _, _, _ ->
             val regex = Regex("[0-9,]*")
@@ -58,5 +59,14 @@ class MainActivity : AppCompatActivity() {
         return input.split(",")
             .mapNotNull { it.trim().toIntOrNull() }
             .filter { it.toString().isNotEmpty() }
+    }
+
+    private fun initView() {
+        editText1 = findViewById(R.id.editText1)
+        editText2 = findViewById(R.id.editText2)
+        editText3 = findViewById(R.id.editText3)
+        buttonCalculate = findViewById(R.id.buttonCalculate)
+        buttonClear = findViewById(R.id.buttonClear)
+        textViewResult = findViewById(R.id.textViewResult)
     }
 }
