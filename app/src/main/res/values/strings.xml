@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NumberOperationsApp</string>
+    <string name="editTextHint1">Enter numbers (e.g., 1,3,5,6,8)</string>
+    <string name="editTextHint2">Enter numbers (e.g., 1,3,5,6,9)</string>
+    <string name="editTextHint3">Enter numbers (e.g., 1,3,5,6,10)</string>
+    <string name="buttonText">Calculate</string>
+    <string name="buttonText2">Clear</string>
+    <string name="screenIntersectionText">Intersection: </string>
+    <string name="screenUnionText">Union: </string>
+    <string name="screenHighestNumberText">Highest Number: </string>
+</resources>
